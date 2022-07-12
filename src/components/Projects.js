@@ -65,18 +65,17 @@ export const Projects = () => {
                   <Nav.Link eventKey="third">Back | APIS</Nav.Link>
                 </Nav.Item>
               </Nav>
-<TrackVisibility>
-                  {({ isVisible }) => (
-                    <div
-                      className={
-                        isVisible ? "animate__animated animate__pulse" : ""
-                      }
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? "animate__animated animate__pulse" : ""
+                    }
+                  >
+                    <Tab.Content
+                    /* id="slideInUp" */
+                    // className={isVisible ? "animate__animated animate__bounce" : ""}
                     >
-              <Tab.Content
-              /* id="slideInUp" */
-              // className={isVisible ? "animate__animated animate__bounce" : ""}
-              >
-                
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => {
@@ -84,25 +83,24 @@ export const Projects = () => {
                           })}
                         </Row>
                       </Tab.Pane>
-                                    <Tab.Pane eventKey="second">
-                  <Row>
-                    {projects.map((project, index) => {
-                      return <ProjectCard key={index} {...project} />;
-                    })}
-                  </Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="third">
-                  <Row>
-                    {projects.map((project, index) => {
-                      return <ProjectCard key={index} {...project} />;
-                    })}
-                  </Row>
-                </Tab.Pane>
-              </Tab.Content>
-</div>
-                  )}
-                </TrackVisibility>
-
+                      <Tab.Pane eventKey="second">
+                        <Row>
+                          {projects.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="third">
+                        <Row>
+                          {projects.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                    </Tab.Content>
+                  </div>
+                )}
+              </TrackVisibility>
             </Tab.Container>
           </Col>
         </Row>
