@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/images/logo.svg";
 import navIcon1 from "../assets/images/nav-icon1.svg";
-import navIcon2 from "../assets/images/nav-icon2.svg";
 import navIcon3 from "../assets/images/nav-icon3.svg";
+import git_icon from '../assets/images/git_4.svg'
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -64,19 +64,19 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/marcelo-batista-fajardo-3a068416a">
                 <img src={navIcon1} alt="" />
               </a>
-              <a href="#">
-                <img src={navIcon2} alt="" />
+              <a href="https://github.com/javaPhpMyAdmin">
+                <img src={git_icon} alt="" />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/chelitooo_bati/">
                 <img src={navIcon3} alt="" />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("conect")}>
+            <a href='#connect'><button className="vvd" onClick={() => console.log("conect")}>
               <span>Let's Connect</span>
-            </button>
+            </button></a>
           </span>
         </Navbar.Collapse>
       </Container>

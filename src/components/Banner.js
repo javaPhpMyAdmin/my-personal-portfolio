@@ -67,9 +67,11 @@ export const Banner = () => {
                     <span className="wrap">{text}</span>
                   </h1>
                   <p>A LITTLE DESCRIPTION ABOUT ME</p>
-                  <button onClick={() => console.log("connect")}>
-                    Let's connect <ArrowRightCircle size={25} />
-                  </button>
+                  <a style={{textDecoration:'none'}} href="#connect">
+                    <button onClick={""}>
+                      Let's connect <ArrowRightCircle size={25} />
+                    </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>
