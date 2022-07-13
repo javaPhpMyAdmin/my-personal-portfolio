@@ -1,20 +1,21 @@
-import { useState, useRef } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import TrackVisibility from "react-on-screen";
-import contactImg from "../assets/images/contact-img.svg";
-import "animate.css";
-import emailjs from "@emailjs/browser";
+import { useState, useRef } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import TrackVisibility from 'react-on-screen';
+import contactImg from '../assets/images/contact-img.svg';
+import 'animate.css';
+import emailjs from '@emailjs/browser';
+import { CircularStatic } from './CircularStatic';
 
 export const Contact = () => {
   const formInitialDetails = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
+  const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState({});
 
   const form = useRef();
@@ -44,7 +45,7 @@ export const Contact = () => {
     e.preventDefault();
 
     if (!validateFormFields(formDetails)) return null;
-    setButtonText("Sending...");
+    setButtonText('Sending...');
     try {
       const result = await emailjs.sendForm(
         process.env.REACT_APP_SERVICE_ID,
@@ -53,20 +54,21 @@ export const Contact = () => {
         process.env.REACT_APP_USER_ID
       );
       if (result.status === 200)
-        setStatus({ success: true, message: "Message sent successfully" });
+        setStatus({ success: true, message: 'Message sent successfully' });
     } catch (error) {
       setStatus({
         success: false,
-        message: "Something went wrong, please try again later.",
+        message: 'Something went wrong, please try again later.',
       });
     } finally {
-      setButtonText("Send");
+      setButtonText('Send');
       setFormDetails(formInitialDetails);
     }
   };
 
   return (
     <section className="contact" id="connect">
+      <CircularStatic />
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
@@ -74,7 +76,7 @@ export const Contact = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
+                    isVisible ? 'animate__animated animate__zoomIn' : ''
                   }
                 >
                   <img src={contactImg} alt="Contact me" />
@@ -87,7 +89,7 @@ export const Contact = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__rubberBand" : ""
+                    isVisible ? 'animate__animated animate__rubberBand' : ''
                   }
                 >
                   <h2>Get In Touch</h2>
@@ -98,7 +100,7 @@ export const Contact = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__fadeInUp" : ""
+                    isVisible ? 'animate__animated animate__fadeInUp' : ''
                   }
                 >
                   <form ref={form} onSubmit={handleSubmit}>
@@ -110,7 +112,7 @@ export const Contact = () => {
                           value={formDetails.firstName}
                           placeholder="First Name"
                           onChange={(e) =>
-                            onFormUpdate("firstName", e.target.value)
+                            onFormUpdate('firstName', e.target.value)
                           }
                         />
                       </Col>
@@ -121,7 +123,7 @@ export const Contact = () => {
                           value={formDetails.lastName}
                           placeholder="Last Name"
                           onChange={(e) =>
-                            onFormUpdate("lastName", e.target.value)
+                            onFormUpdate('lastName', e.target.value)
                           }
                         />
                       </Col>
@@ -132,7 +134,7 @@ export const Contact = () => {
                           value={formDetails.email}
                           placeholder="Email Address"
                           onChange={(e) =>
-                            onFormUpdate("email", e.target.value)
+                            onFormUpdate('email', e.target.value)
                           }
                         />
                       </Col>
@@ -143,7 +145,7 @@ export const Contact = () => {
                           value={formDetails.phone}
                           placeholder="Phone No."
                           onChange={(e) =>
-                            onFormUpdate("phone", e.target.value)
+                            onFormUpdate('phone', e.target.value)
                           }
                         />
                       </Col>
@@ -154,10 +156,10 @@ export const Contact = () => {
                           value={formDetails.message}
                           placeholder="Message"
                           onChange={(e) =>
-                            onFormUpdate("message", e.target.value)
+                            onFormUpdate('message', e.target.value)
                           }
                         ></textarea>
-                        <button style={{ borderRadius: "10px" }} type="submit">
+                        <button style={{ borderRadius: '10px' }} type="submit">
                           <span>{buttonText}</span>
                         </button>
                       </Col>
@@ -166,7 +168,7 @@ export const Contact = () => {
                           <h3>
                             <p
                               className={
-                                status.success === false ? "danger" : "success"
+                                status.success === false ? 'danger' : 'success'
                               }
                             >
                               {status.message}

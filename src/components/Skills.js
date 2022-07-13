@@ -5,6 +5,7 @@ import meter1 from '../assets/images/meter1.svg';
 import meter2 from '../assets/images/meter2.svg';
 import meter3 from '../assets/images/meter3.svg';
 import colorSharp from '../assets/images/color-sharp.png';
+import { CircularStatic } from './CircularStatic';
 
 const responsive = {
   superLargeDesktop: {
@@ -25,7 +26,7 @@ const responsive = {
     items: 1,
   },
 };
-
+const reactSkill = 90;
 export const Skills = () => {
   return (
     <section className="skill" id="skills">
@@ -41,7 +42,7 @@ export const Skills = () => {
                 className="skill-slider"
               >
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <CircularStatic itemPercentage={reactSkill} />
                   <h5>Web Development</h5>
                 </div>
                 <div className="item">
