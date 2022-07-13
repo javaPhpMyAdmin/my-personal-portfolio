@@ -12,10 +12,8 @@ export const CircularProgressWithLabel = (props) => {
     >
       <CircularProgress
         size={120}
-        disableShrink={true}
         value={progress}
         variant="determinate"
-        thickness={5}
         color="secondary"
       />
       <Box
