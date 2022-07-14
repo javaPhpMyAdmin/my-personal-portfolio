@@ -68,7 +68,6 @@ export const Contact = () => {
 
   return (
     <section className="contact" id="connect">
-      <CircularStatic />
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
