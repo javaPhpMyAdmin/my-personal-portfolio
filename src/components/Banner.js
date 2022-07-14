@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/images/header-img.svg";
-import "animate.css";
-import TrackVisibility from "react-on-screen";
+import { useState, useEffect } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { ArrowRightCircle } from 'react-bootstrap-icons';
+import headerImg from '../assets/images/header-img.svg';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "Mobile Developer", "Mobile Designer"];
-  const [text, setText] = useState("");
+  const toRotate = ['Web Developer', 'Mobile Developer', 'Mobile Designer'];
+  const [text, setText] = useState('');
   const period = 2000;
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
@@ -40,7 +40,7 @@ export const Banner = () => {
       setIsDeleting(true);
       setIndex((prevIndex) => prevIndex - 1);
       setDelta(period);
-    } else if (isDeleting && updateText === "") {
+    } else if (isDeleting && updateText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setDelta(500);
@@ -58,7 +58,7 @@ export const Banner = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__backInLeft" : ""
+                    isVisible ? 'animate__animated animate__backInLeft' : ''
                   }
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
@@ -67,8 +67,8 @@ export const Banner = () => {
                     <span className="wrap">{text}</span>
                   </h1>
                   <p>A LITTLE DESCRIPTION ABOUT ME</p>
-                  <a style={{textDecoration:'none'}} href="#connect">
-                    <button onClick={""}>
+                  <a style={{ textDecoration: 'none' }} href="#connect">
+                    <button onClick={''}>
                       Let's connect <ArrowRightCircle size={25} />
                     </button>
                   </a>
