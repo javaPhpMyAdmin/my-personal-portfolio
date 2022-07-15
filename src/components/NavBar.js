@@ -25,7 +25,7 @@ export const NavBar = () => {
   }, []);
   return (
     <Navbar expand="lg" className={scrolled ? 'scrolled' : ''}>
-      <Container>
+      <Container >
         <Navbar.Brand href="#home">
           <img
             style={{
@@ -85,7 +85,7 @@ export const NavBar = () => {
                 <img src={navIcon3} alt="" />
               </a>
             </div>
-            <a href="#connect">
+            <a href="#connect" className='buttonConnect'>
               <button className="vvd" onClick={() => console.log('conect')}>
                 <span>Let's Connect</span>
               </button>
