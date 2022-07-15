@@ -1,42 +1,42 @@
-import { useState } from "react";
-import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
-import projImg1 from "../assets/images/project-img1.png";
-import projImg2 from "../assets/images/project-img2.png";
-import projImg3 from "../assets/images/project-img3.png";
-import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/images/color-sharp2.png";
-import "animate.css";
-import TrackVisibility from "react-on-screen";
+import { useState } from 'react';
+import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
+import projImg1 from '../assets/images/project-img1.png';
+import projImg2 from '../assets/images/project-img2.png';
+import projImg3 from '../assets/images/project-img3.png';
+import { ProjectCard } from './ProjectCard';
+import colorSharp2 from '../assets/images/color-sharp2.png';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 const projects = [
   {
-    title: "Business Startup",
-    description: "Design & Development",
+    title: 'Business Startup',
+    description: 'Design & Development',
     imgUrl: projImg1,
   },
   {
-    title: "Business Startup",
-    description: "Design & Development",
+    title: 'Business Startup',
+    description: 'Design & Development',
     imgUrl: projImg2,
   },
   {
-    title: "Business Startup",
-    description: "Design & Development",
+    title: 'Business Startup',
+    description: 'Design & Development',
     imgUrl: projImg3,
   },
   {
-    title: "Business Startup",
-    description: "Design & Development",
+    title: 'Business Startup',
+    description: 'Design & Development',
     imgUrl: projImg1,
   },
   {
-    title: "Business Startup",
-    description: "Design & Development",
+    title: 'Business Startup',
+    description: 'Design & Development',
     imgUrl: projImg2,
   },
   {
-    title: "Business Startup",
-    description: "Design & Development",
+    title: 'Business Startup',
+    description: 'Design & Development',
     imgUrl: projImg3,
   },
 ];
@@ -62,14 +62,14 @@ export const Projects = () => {
                   <Nav.Link eventKey="second">Mobile Projects</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Back | APIS</Nav.Link>
+                  <Nav.Link eventKey="third">Backend | APIs</Nav.Link>
                 </Nav.Item>
               </Nav>
               <TrackVisibility>
                 {({ isVisible }) => (
                   <div
                     className={
-                      isVisible ? "animate__animated animate__pulse" : ""
+                      isVisible ? 'animate__animated animate__pulse' : ''
                     }
                   >
                     <Tab.Content

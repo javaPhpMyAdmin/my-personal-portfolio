@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CircularProgressWithLabel } from './CircularProgressWithLabel';
 
-const itemValue = 80;
-
 export const CircularStatic = ({ itemPercentage }) => {
   const [progressStatus, setProgressStatus] = useState(0);
 
