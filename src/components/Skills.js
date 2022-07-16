@@ -1,10 +1,11 @@
-import Carousel from 'react-multi-carousel';
-import { Container, Row, Col } from 'react-bootstrap';
-import 'react-multi-carousel/lib/styles.css';
-import colorSharp from '../assets/images/color-sharp.png';
-import { CircularStatic } from './CircularStatic';
-import { useInView } from 'react-intersection-observer';
-import { useState } from 'react';
+import Carousel from "react-multi-carousel";
+import { Container, Row, Col } from "react-bootstrap";
+import "react-multi-carousel/lib/styles.css";
+import colorSharp from "../assets/images/color-sharp.png";
+import { CircularStatic } from "./CircularStatic";
+import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+import { DataSkills } from "../utils";
 
 const responsive = {
   superLargeDesktop: {
@@ -48,37 +49,14 @@ export const Skills = () => {
                 infinite={false}
                 className="skill-slider"
               >
-                {inView && (
-                  <div className="item">
-                    <CircularStatic itemPercentage={reactSkill} />
-                    <h5 style={{ paddingTop: 10 }}>ReactJs </h5>
-                  </div>
-                )}
-
-                <div className="item">
-                  <CircularStatic itemPercentage={nodeSkill} />
-                  <h5 style={{ paddingTop: 10 }}>NodeJs Express | NestJs</h5>
-                </div>
-                <div className="item">
-                  <CircularStatic itemPercentage={pythonSkill} />
-                  <h5 style={{ paddingTop: 10 }}>Python (Flask)</h5>
-                </div>
-                <div className="item">
-                  <CircularStatic itemPercentage={mySqlSkill} />
-                  <h5 style={{ paddingTop: 10 }}>MySQL</h5>
-                </div>
-                <div className="item">
-                  <CircularStatic itemPercentage={sqlSkill} />
-                  <h5 style={{ paddingTop: 10 }}>SQL</h5>
-                </div>
-                <div className="item">
-                  <CircularStatic itemPercentage={htmlCssJavascript} />
-                  <h5 style={{ paddingTop: 10 }}>HTML5 | CSS | JavaScript</h5>
-                </div>
-                <div className="item">
-                  <CircularStatic itemPercentage={reactNativeSkill} />
-                  <h5 style={{ paddingTop: 10 }}>React Native</h5>
-                </div>
+                {inView &&
+                  DataSkills.map((itemSkill, index) => (
+                    //TODO:TO CREATE A NEW COMPONENT ItemSkill TO SHOW INFORMATION
+                    <div className="item" key={index}>
+                      <CircularStatic {...itemSkill} />
+                      <h5 style={{ paddingTop: 10 }}>{itemSkill.skill} </h5>
+                    </div>
+                  ))}
               </Carousel>
             </div>
           </Col>
