@@ -5,3 +5,4 @@ export * from './Skills';
 export * from './ProjectCard';
 export * from './Projects';
 export * from './CircularStatic';
+export * from './ItemSkill'

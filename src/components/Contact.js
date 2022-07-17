@@ -4,7 +4,6 @@ import TrackVisibility from 'react-on-screen';
 import contactImg from '../assets/images/contact-img.svg';
 import 'animate.css';
 import emailjs from '@emailjs/browser';
-import { CircularStatic } from './CircularStatic';
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -35,7 +34,7 @@ export const Contact = () => {
     message,
   }) => {
     if (!firstName || !lastName || !email || !phone || !message) {
-      setStatus({ success: false, message: "The fields mustn't be empty." });
+      setStatus({ success: false, message: "Fields must not be empty." });
       return false;
     }
     return true;

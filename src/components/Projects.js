@@ -1,45 +1,13 @@
-import { useState } from 'react';
-import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
-import projImg1 from '../assets/images/project-img1.png';
-import projImg2 from '../assets/images/project-img2.png';
-import projImg3 from '../assets/images/project-img3.png';
-import { ProjectCard } from './ProjectCard';
-import colorSharp2 from '../assets/images/color-sharp2.png';
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
-
-const projects = [
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg1,
-  },
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg2,
-  },
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg3,
-  },
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg1,
-  },
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg2,
-  },
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg3,
-  },
-];
+import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
+import { ProjectCard } from "./ProjectCard";
+import colorSharp2 from "../assets/images/color-sharp2.png";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
+import {
+  WebProjects,
+  MobileProjects,
+  BackendProjects,
+} from "../utils/ProjectsData";
 
 export const Projects = () => {
   return (
@@ -69,30 +37,27 @@ export const Projects = () => {
                 {({ isVisible }) => (
                   <div
                     className={
-                      isVisible ? 'animate__animated animate__pulse' : ''
+                      isVisible ? "animate__animated animate__pulse" : ""
                     }
                   >
-                    <Tab.Content
-                    /* id="slideInUp" */
-                    // className={isVisible ? "animate__animated animate__bounce" : ""}
-                    >
+                    <Tab.Content>
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {projects.map((project, index) => {
+                          {WebProjects.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                         <Row>
-                          {projects.map((project, index) => {
+                          {MobileProjects.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <Row>
-                          {projects.map((project, index) => {
+                          {BackendProjects.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>

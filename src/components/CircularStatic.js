@@ -11,7 +11,7 @@ export const CircularStatic = ({percentage}) => {
       );
     }, 30);
     return () => clearInterval(timer);
-  }, []);
+  }, [percentage]);
 
   return <CircularProgressWithLabel progress={progressStatus} />;
 };

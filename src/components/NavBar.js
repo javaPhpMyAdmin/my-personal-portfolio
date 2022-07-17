@@ -86,7 +86,7 @@ export const NavBar = () => {
               </a>
             </div>
             <a href="#connect" className='buttonConnect'>
-              <button className="vvd" onClick={() => console.log('conect')}>
+              <button className="vvd" >
                 <span>Let's Connect</span>
               </button>
             </a>
