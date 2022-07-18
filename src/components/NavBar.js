@@ -41,7 +41,7 @@ export const NavBar = () => {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toogler-icon">hh</span>
+          <span className="navbar-toogler-icon">MENU</span> 
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -76,13 +76,13 @@ export const NavBar = () => {
           <span className="navbar-text">
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/marcelo-batista-fajardo-3a068416a">
-                <img src={navIcon1} alt="" />
+                <img src={navIcon1} alt="linkedin" />
               </a>
               <a href="https://github.com/javaPhpMyAdmin">
-                <img src={git_icon} alt="" />
+                <img src={git_icon} alt="github" />
               </a>
               <a href="https://www.instagram.com/chelitooo_bati/">
-                <img src={navIcon3} alt="" />
+                <img src={navIcon3} alt="instagram" />
               </a>
             </div>
             <a href="#connect" className='buttonConnect'>

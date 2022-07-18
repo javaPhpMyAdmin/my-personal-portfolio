@@ -69,7 +69,7 @@ export const Banner = () => {
                   </h1>
                   <p>A LITTLE DESCRIPTION ABOUT ME</p>
                   <a style={{ textDecoration: 'none' }} href="#connect">
-                    <button onClick={''}>
+                    <button >
                       Let's connect <ArrowRightCircle size={25} />
                     </button>
                   </a>

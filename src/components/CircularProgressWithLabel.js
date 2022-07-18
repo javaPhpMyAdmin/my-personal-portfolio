@@ -12,7 +12,7 @@ export const CircularProgressWithLabel = (props) => {
     >
       <CircularProgress
         size={120}
-        value={progress}
+        value={Number(progress)}
         variant="determinate"
         color="secondary"
       />
