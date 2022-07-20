@@ -1,13 +1,13 @@
-import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/images/color-sharp2.png";
-import "animate.css";
-import TrackVisibility from "react-on-screen";
+import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
+import { ProjectCard } from './ProjectCard';
+import colorSharp2 from '../assets/images/color-sharp2.png';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 import {
   WebProjects,
   MobileProjects,
   BackendProjects,
-} from "../utils/ProjectsData";
+} from '../utils/ProjectsData';
 
 export const Projects = () => {
   return (
@@ -37,7 +37,7 @@ export const Projects = () => {
                 {({ isVisible }) => (
                   <div
                     className={
-                      isVisible ? "animate__animated animate__pulse" : ""
+                      isVisible ? 'animate__animated animate__pulse' : ''
                     }
                   >
                     <Tab.Content>

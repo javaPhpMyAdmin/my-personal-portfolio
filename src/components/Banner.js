@@ -8,9 +8,9 @@ import TrackVisibility from 'react-on-screen';
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate =useMemo(()=> ['Web Developer', 'Mobile Developer'],[]);
+  const toRotate = useMemo(() => ['Web Developer', 'Mobile Developer'], []);
 
-    const [text, setText] = useState('');
+  const [text, setText] = useState('');
   const period = 2000;
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [, setIndex] = useState(1);
@@ -38,7 +38,7 @@ export const Banner = () => {
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
-  },[isDeleting,loopNum,setText,toRotate,text.length]);
+  }, [isDeleting, loopNum, setText, toRotate, text.length]);
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -48,7 +48,7 @@ export const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [text,delta,tick]);
+  }, [text, delta, tick]);
 
   return (
     <section className="banner" id="home">
@@ -67,9 +67,16 @@ export const Banner = () => {
                     {`Hi I'm Marcelo  `}
                     <span className="wrap">{text}</span>
                   </h1>
-                  <p>A LITTLE DESCRIPTION ABOUT ME</p>
+                  <p>
+                    I am a software engineering student and currently I am
+                    pursuing B. Tech Degree(Final Year) in Computer Science
+                    Enginnering at the University. I have been learning in a
+                    self-taught way many technologies for 3+ years, doing
+                    various projects both mobile and web and trying to apply
+                    good practices as well as improve my knowledge.
+                  </p>
                   <a style={{ textDecoration: 'none' }} href="#connect">
-                    <button >
+                    <button>
                       Let's connect <ArrowRightCircle size={25} />
                     </button>
                   </a>

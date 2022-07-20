@@ -1,5 +1,7 @@
-import { useState } from "react";
-import { Button, Col, Modal } from "react-bootstrap";
+import { useState } from 'react';
+import { Button, Col, Modal } from 'react-bootstrap';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 export const ProjectCard = ({
   title,
@@ -7,6 +9,7 @@ export const ProjectCard = ({
   imgUrl,
   siteURL,
   gitURL,
+  technologies,
 }) => {
   const [show, setShow] = useState(false);
   return (
@@ -18,31 +21,45 @@ export const ProjectCard = ({
           <span>{description}</span>
         </div>
       </div>
-      <Modal
-        onHide={() => setShow(false)}
-        show={show}
-        size="lg"
-        centered
-        animation
-        id="modal-container"
-      >
-        <Modal.Header id="modal-header">
-          <Modal.Title id="modal-title">{title}</Modal.Title>
-
-          <Button onClick={() => setShow(!show)} variant="secondary">
-            X
-          </Button>
-        </Modal.Header>
-        <Modal.Body id="modal-body">MY BODY INSIDE A MODAL</Modal.Body>
-        <Modal.Footer id="modal-footer">
-          <a href={gitURL}>
-          <Button variant="primary">GitHub</Button>
-          </a>
-          <a href={siteURL}>
-            <Button variant="primary">Visit Site</Button>
-          </a>
-        </Modal.Footer>
-      </Modal>
+      <TrackVisibility>
+        {({ isVisible }) => (
+          <div className={isVisible ? 'animate__animated animate__bounce' : ''}>
+            <Modal
+              onHide={() => setShow(false)}
+              show={show}
+              size="lg"
+              centered
+              animation={true}
+              id="modal-container"
+            >
+              <Modal.Header id="modal-header">
+                <Modal.Title id="modal-title">{title}</Modal.Title>
+                <Button onClick={() => setShow(!show)} variant="secondary">
+                  X
+                </Button>
+              </Modal.Header>
+              <Modal.Body id="modal-body">MY BODY INSIDE A MODAL</Modal.Body>
+              <Modal.Body id="modal-body">
+                <div className="tech-container">
+                  {technologies.map((tech, index) => (
+                    <div key={index} className="tech-item-container">
+                      <div className="tech-item">{tech}</div>
+                    </div>
+                  ))}
+                </div>
+              </Modal.Body>
+              <Modal.Footer id="modal-footer">
+                <a href={gitURL}>
+                  <Button variant="primary">GitHub</Button>
+                </a>
+                <a href={siteURL}>
+                  <Button variant="primary">Visit Site</Button>
+                </a>
+              </Modal.Footer>
+            </Modal>
+          </div>
+        )}
+      </TrackVisibility>
     </Col>
   );
 };
