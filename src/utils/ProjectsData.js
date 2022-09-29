@@ -67,46 +67,6 @@ export const WebProjects = [
     siteURL: '',
     technologies: ['React', 'React-Bootstrap', 'Firebase'],
   },
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg2,
-    gitURL: '',
-    siteURL: '',
-    technologies: ['React', 'React-Bootstrap', 'Firebase'],
-  },
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg3,
-    gitURL: '',
-    siteURL: '',
-    technologies: ['React', 'React-Bootstrap', 'Firebase'],
-  },
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg1,
-    gitURL: '',
-    siteURL: '',
-    technologies: ['React', 'React-Bootstrap', 'Firebase'],
-  },
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg2,
-    gitURL: '',
-    siteURL: '',
-    technologies: ['React', 'React-Bootstrap', 'Firebase'],
-  },
-  {
-    title: 'Business Startup',
-    description: 'Design & Development',
-    imgUrl: projImg3,
-    gitURL: '',
-    siteURL: '',
-    technologies: ['React', 'React-Bootstrap', 'Firebase'],
-  },
 ];
 
 export const MobileProjects = [
