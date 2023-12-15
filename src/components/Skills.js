@@ -16,7 +16,7 @@ export const Skills = () => {
           <Col>
             <div className="skill-bx">
               <h2>Skills</h2>
-              <p>SOME SHORT DESCRIPTION HERE</p>
+              <p>SOME OF MY SKILLS</p>
               <Carousel
                 responsive={responsive}
                 infinite={false}

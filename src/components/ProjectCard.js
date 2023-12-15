@@ -15,7 +15,7 @@ export const ProjectCard = ({
   return (
     <Col sm={6} md={4}>
       <div className="proj-imgbx" onClick={() => setShow(!show)}>
-        <img src={imgUrl} alt="img" />
+        <img id="imgProject" src={imgUrl} alt="img" />
         <div className="proj-txtx">
           <h4>{title}</h4>
           <span>{description}</span>

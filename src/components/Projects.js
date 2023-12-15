@@ -16,7 +16,7 @@ export const Projects = () => {
         <Row>
           <Col>
             <h2>Projects</h2>
-            <p>SOME LOREMP ITSUM</p>
+            <p>A RESUME FOR SOME PROJECTS</p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav
                 variant="pills"

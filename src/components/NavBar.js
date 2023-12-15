@@ -3,7 +3,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import myLogo from '../assets/images/Developers_2.svg';
 import navIcon1 from '../assets/images/nav-icon1.svg';
 import navIcon3 from '../assets/images/nav-icon3.svg';
-import git_icon from '../assets/images/git_4.svg';
+import git_icon from '../assets/images/github-svgrepo-com.svg';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -25,7 +25,7 @@ export const NavBar = () => {
   }, []);
   return (
     <Navbar expand="lg" className={scrolled ? 'scrolled' : ''}>
-      <Container >
+      <Container>
         <Navbar.Brand href="#home">
           <img
             style={{
@@ -41,7 +41,7 @@ export const NavBar = () => {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toogler-icon">MENU</span> 
+          <span className="navbar-toogler-icon">MENU</span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -79,14 +79,14 @@ export const NavBar = () => {
                 <img src={navIcon1} alt="linkedin" />
               </a>
               <a href="https://github.com/javaPhpMyAdmin">
-                <img src={git_icon} alt="github" />
+                <img className="git" src={git_icon} alt="github" />
               </a>
               <a href="https://www.instagram.com/chelitooo_bati/">
                 <img src={navIcon3} alt="instagram" />
               </a>
             </div>
-            <a href="#connect" className='buttonConnect'>
-              <button className="vvd" >
+            <a href="#connect" className="buttonConnect">
+              <button className="vvd">
                 <span>Let's Connect</span>
               </button>
             </a>

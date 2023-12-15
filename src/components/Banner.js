@@ -36,11 +36,12 @@ export const Banner = () => {
       setLoopNum(loopNum + 1);
       setDelta(500);
     } else {
-      setIndex((prevIndex) => prevIndex + 1);
+	setIndex((prevIndex) => prevIndex + 1);
     }
   }, [isDeleting, loopNum, setText, toRotate, text.length]);
 
-  useEffect(() => {
+  
+useEffect(() => {
     let ticker = setInterval(() => {
       tick();
     }, delta);
